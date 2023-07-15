@@ -9,6 +9,8 @@ import 'package:fruit_onlyn_shop_app/pages/my_basket.dart';
 import 'package:fruit_onlyn_shop_app/pages/pay_with_card.dart';
 import 'package:fruit_onlyn_shop_app/pages/start_ordering.dart';
 import 'package:fruit_onlyn_shop_app/pages/track_order.dart';
+import 'package:fruit_onlyn_shop_app/providers/common_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() => runApp(const MyApp());
 
@@ -17,20 +19,25 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialRoute: '/main-menu',
-      routes: {
-        '/main-menu': (context) => const MainMenu(),
-        '/lets-contiuns': (context) => const LetsContiuns(),
-        '/start-ordering': (context) => const StartOrdering(),
-        '/home-page': (context) => const HomePage(),
-        '/add-to-basket': (context) => const AddToBasket(),
-        '/my-basket': (context) => const MyBasket(),
-        '/pay-with-card': (context) => const PayWithCard(),
-        '/track-order': (context) => const TrackOrder(),
-        '/delivery-status': (context) => const DeliveryStatus(),
-        '/complate-order': (context) => const ComplateOrder(),
+    return ChangeNotifierProvider<CommonProvider>(
+      create: (context) => CommonProvider(),
+      builder: (context, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          initialRoute: '/main-menu',
+          routes: {
+            '/main-menu': (context) => const MainMenu(),
+            '/lets-contiuns': (context) => const LetsContiuns(),
+            '/start-ordering': (context) => const StartOrdering(),
+            '/home-page': (context) => const HomePage(),
+            '/add-to-basket': (context) => const AddToBasket(),
+            '/my-basket': (context) => const MyBasket(),
+            '/pay-with-card': (context) => const PayWithCard(),
+            '/track-order': (context) => const TrackOrder(),
+            '/delivery-status': (context) => const DeliveryStatus(),
+            '/complate-order': (context) => const ComplateOrder(),
+          },
+        );
       },
     );
   }
