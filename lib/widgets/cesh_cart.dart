@@ -8,7 +8,7 @@ class CeshCart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       height: 56,
       decoration: BoxDecoration(
         color: const Color(0xFFF3F1F1),

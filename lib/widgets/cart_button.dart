@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CartButton extends StatelessWidget {
   final String buttonName;
   final double width;
-  final Function? onPress;
+  final Function()? onPress;
   const CartButton({super.key, required this.buttonName, required this.width, this.onPress});
 
   @override
@@ -14,7 +14,7 @@ class CartButton extends StatelessWidget {
         minimumSize: MaterialStatePropertyAll(Size(width, 56)),
         shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
       ),
-      onPressed: () {},
+      onPressed: onPress,
       child: Text(buttonName, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500, fontFamily: 'Josefin Sans', color: Color(0xFFFFA451))),
     );
   }

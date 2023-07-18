@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_onlyn_shop_app/widgets/cart_button.dart';
-import 'package:fruit_onlyn_shop_app/widgets/complate.dart';
+import 'package:fruit_onlyn_shop_app/widgets/oddiy_text.dart';
 
 import 'cesh_cart.dart';
+import 'complate.dart';
 
 class BottomShit extends StatelessWidget {
   const BottomShit({super.key});
@@ -33,17 +34,11 @@ class BottomShit extends StatelessWidget {
                         child: ListView(
                           children: [
                             const SizedBox(height: 40),
-                            const Text(
-                              'Delivery address',
-                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, fontFamily: 'josefin Sans', color: Color(0xFF27214D)),
-                            ),
+                            const TitleText(text: 'Delivery address'),
                             const SizedBox(height: 16),
                             const CeshCart(title: '10th avenue, Lekki, Lagos State', type: TextInputType.text),
                             const SizedBox(height: 24),
-                            const Text(
-                              'Number we can call',
-                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, fontFamily: 'josefin Sans', color: Color(0xFF27214D)),
-                            ),
+                            const TitleText(text: 'Number we can call'),
                             const SizedBox(height: 16),
                             const CeshCart(title: '09090605708', type: TextInputType.number),
                             const SizedBox(height: 40),
@@ -55,9 +50,12 @@ class BottomShit extends StatelessWidget {
                                     buttonName: 'Pay with card',
                                     width: 115,
                                     onPress: () {
+                                      Navigator.pop(context);
                                       showModalBottomSheet(
-                                        backgroundColor: Colors.amber,
+                                        isScrollControlled: true,
+                                        backgroundColor: Colors.white,
                                         context: context,
+                                        shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(24))),
                                         builder: (context) {
                                           return const ComplateOrder();
                                         },
