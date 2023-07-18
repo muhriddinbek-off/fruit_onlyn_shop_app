@@ -32,7 +32,7 @@ class _HottestState extends State<Hottest> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title, style: TextStyle(fontSize: current == index ? 24 : 16, fontWeight: FontWeight.w500, color: current == index ? Color(0xFF27214D) : Color(0xFF938DB5))),
+          Text(title, style: TextStyle(fontSize: current == index ? 24 : 16, fontWeight: FontWeight.w500, color: current == index ? const Color(0xFF27214D) : const Color(0xFF938DB5), fontFamily: 'Josefin Sans')),
           Container(
             height: 4,
             width: 30,

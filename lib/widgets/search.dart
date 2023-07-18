@@ -15,7 +15,7 @@ class SearchWidget extends StatelessWidget {
           width: 288,
           decoration: BoxDecoration(color: const Color(0xFFF3F4F9), borderRadius: BorderRadius.circular(16)),
           child: const TextField(
-            decoration: InputDecoration(border: InputBorder.none, icon: Icon(Icons.search, color: Color(0xFF86869E), size: 26), hintText: 'Search for fruit salad combos', hintStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: Color(0xFF86869E))),
+            decoration: InputDecoration(border: InputBorder.none, icon: Icon(Icons.search, color: Color(0xFF86869E), size: 26), hintText: 'Search for fruit salad combos', hintStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: Color(0xFF86869E), fontFamily: 'Josefin Sans')),
           ),
         ),
         const SizedBox(width: 10),

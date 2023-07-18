@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
                       Navigator.pushNamed(context, '/my-basket');
                     },
                     icon: const Icon(Icons.shopping_basket, color: Color(0xFFFFA451), size: 30)),
-                const Text('My Basket', style: TextStyle(fontSize: 10, fontWeight: FontWeight.w400, color: Color(0xFF27214D))),
+                const Text('My Basket', style: TextStyle(fontSize: 10, fontWeight: FontWeight.w400, color: Color(0xFF27214D), fontFamily: 'Josefin Sans')),
               ],
             ),
           )
@@ -40,12 +40,12 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 10),
             const Text(
               'Hello Tony, What fruit salad combo do you want today?',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: Color(0xFF27214D)),
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: Color(0xFF27214D), fontFamily: 'Josefin Sans'),
             ),
             const SizedBox(height: 24),
             const SearchWidget(),
             const SizedBox(height: 40),
-            const Text('Recommended Combo', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500, color: Color(0xFF27214D))),
+            const Text('Recommended Combo', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500, color: Color(0xFF27214D), fontFamily: 'Josefin Sans')),
             const SizedBox(height: 18),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

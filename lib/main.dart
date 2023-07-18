@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_onlyn_shop_app/pages/add_to_basket.dart';
-import 'package:fruit_onlyn_shop_app/pages/complate_order.dart';
 import 'package:fruit_onlyn_shop_app/pages/delivery_status.dart';
 import 'package:fruit_onlyn_shop_app/pages/home_page.dart';
 import 'package:fruit_onlyn_shop_app/pages/lets_contiuns.dart';
@@ -19,8 +18,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<CommonProvider>(
-      create: (context) => CommonProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => CommonProvider()),
+        ChangeNotifierProvider(create: (context) => CommonSent()),
+      ],
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
@@ -35,7 +37,6 @@ class MyApp extends StatelessWidget {
             '/pay-with-card': (context) => const PayWithCard(),
             '/track-order': (context) => const TrackOrder(),
             '/delivery-status': (context) => const DeliveryStatus(),
-            '/complate-order': (context) => const ComplateOrder(),
           },
         );
       },

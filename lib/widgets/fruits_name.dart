@@ -42,7 +42,7 @@ class _FruitsNameState extends State<FruitsName> {
                     icon: info['select'] ? const Icon(Icons.favorite, color: Colors.red) : const Icon(Icons.favorite_outline, color: Color(0xFFFFA451)),
                   ),
                   Center(child: Image.asset(info['image'], height: 70, width: 90, fit: BoxFit.fill)),
-                  Text(info['name'], style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Color(0xFF27214D), height: 1.9)),
+                  Text(info['name'], style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Color(0xFF27214D), height: 1.9, fontFamily: 'Josefin Sans')),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

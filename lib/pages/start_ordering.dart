@@ -18,7 +18,7 @@ class StartOrdering extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: 56),
-                    const Text('What is your firstname?', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: Color(0xFF27214D))),
+                    const Text('What is your firstname?', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800, color: Color(0xFF27214D), fontFamily: 'Josefin Sans')),
                     const SizedBox(height: 16),
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -29,7 +29,7 @@ class StartOrdering extends StatelessWidget {
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Tony',
-                          hintStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.w400, color: Color(0xFFC2BDBD)),
+                          hintStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.w400, color: Color(0xFFC2BDBD), fontFamily: 'Josefin Sans'),
                         ),
                       ),
                     ),
@@ -45,7 +45,7 @@ class StartOrdering extends StatelessWidget {
                         },
                         child: const Text(
                           'Start Ordering',
-                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.white),
+                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.white, fontFamily: 'Josefin Sans'),
                         )),
                   ],
                 ),

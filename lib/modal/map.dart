@@ -37,4 +37,10 @@ List fruitsInfo = [
   },
 ];
 
-List baskets = [];
+Map totalChek = {
+  "current": 0,
+};
+
+List basketImage = [];
+List basketName = [];
+List basketSent = [];

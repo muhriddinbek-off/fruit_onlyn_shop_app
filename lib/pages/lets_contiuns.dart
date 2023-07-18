@@ -19,13 +19,13 @@ class LetsContiuns extends StatelessWidget {
                     const SizedBox(height: 25),
                     const Text(
                       'Get The Freshest Fruit Salad Combo',
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: Color(0xFF27214D)),
+                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800, color: Color(0xFF27214D), fontFamily: 'Josefin Sans'),
                     ),
                     const SizedBox(
                       child: Expanded(
                           child: Text(
                         'We deliver the best and freshest fruit salad in town. Order for a combo today!!!',
-                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Color(0xFF5D577E), height: 1.8),
+                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Color(0xFF5D577E), height: 1.8, fontFamily: 'Josefin Sans'),
                       )),
                     ),
                     const SizedBox(height: 72),
@@ -40,7 +40,7 @@ class LetsContiuns extends StatelessWidget {
                         },
                         child: const Text(
                           'Let’s Continue',
-                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.white),
+                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.white, fontFamily: 'Josefin Sans'),
                         )),
                   ],
                 ),

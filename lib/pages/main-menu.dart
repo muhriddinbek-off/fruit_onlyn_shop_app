@@ -23,7 +23,7 @@ class MainMenu extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, '/lets-contiuns');
                 },
-                child: const Text('Fruit Hub', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w400, color: Colors.white))),
+                child: const Text('Fruit Hub', style: TextStyle(fontSize: 28, fontWeight: FontWeight.w200, color: Colors.white, fontFamily: 'Josefin Sans'))),
           ],
         ),
       ],
