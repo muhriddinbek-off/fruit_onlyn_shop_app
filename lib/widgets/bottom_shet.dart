@@ -45,7 +45,12 @@ class BottomShit extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                CartButton(buttonName: 'Pay on delivery', width: 125, onPress: () {}),
+                                CartButton(
+                                    buttonName: 'Pay on delivery',
+                                    width: 125,
+                                    onPress: () {
+                                      Navigator.pushNamed(context, '/delivery-status');
+                                    }),
                                 CartButton(
                                     buttonName: 'Pay with card',
                                     width: 115,

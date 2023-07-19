@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_onlyn_shop_app/providers/name_provider.dart';
 import 'package:fruit_onlyn_shop_app/widgets/cambo.dart';
 import 'package:fruit_onlyn_shop_app/widgets/fruits_name.dart';
+import 'package:provider/provider.dart';
 
 import '../widgets/hottest.dart';
 import '../widgets/search.dart';
@@ -10,6 +12,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String name = Provider.of<NameProvider>(context).name;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -38,8 +41,8 @@ class HomePage extends StatelessWidget {
         child: ListView(
           children: [
             const SizedBox(height: 10),
-            const Text(
-              'Hello Tony, What fruit salad combo do you want today?',
+            Text(
+              'Hello $name, What fruit salad combo do you want today?',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: Color(0xFF27214D), fontFamily: 'Josefin Sans'),
             ),
             const SizedBox(height: 24),

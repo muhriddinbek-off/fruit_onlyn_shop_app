@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_onlyn_shop_app/providers/name_provider.dart';
+import 'package:provider/provider.dart';
 
-class StartOrdering extends StatelessWidget {
+class StartOrdering extends StatefulWidget {
   const StartOrdering({super.key});
 
+  @override
+  State<StartOrdering> createState() => _StartOrderingState();
+}
+
+class _StartOrderingState extends State<StartOrdering> {
+  TextEditingController controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,8 +33,9 @@ class StartOrdering extends StatelessWidget {
                       height: 56,
                       width: 327,
                       decoration: BoxDecoration(color: const Color(0xFFF3F1F1), borderRadius: BorderRadius.circular(10)),
-                      child: const TextField(
-                        decoration: InputDecoration(
+                      child: TextField(
+                        controller: controller,
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Tony',
                           hintStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.w400, color: Color(0xFFC2BDBD), fontFamily: 'Josefin Sans'),
@@ -41,7 +50,8 @@ class StartOrdering extends StatelessWidget {
                           shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
                         ),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/home-page');
+                          Provider.of<NameProvider>(context, listen: false).nameProvier(controller.text);
+                          Navigator.pushNamedAndRemoveUntil(context, '/home-page', (route) => false);
                         },
                         child: const Text(
                           'Start Ordering',
